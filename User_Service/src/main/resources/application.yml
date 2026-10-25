@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: User-Service
+  datasource:
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    url: jdbc:postgresql://localhost:5432/userinfo_db
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  main:
+    allow-circular-references: true
+management:
+   endpoints:
+        web:
+         exposure:
+          include: '*'
+server:
+  port: 8081
