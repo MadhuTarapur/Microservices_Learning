@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: Customer-Service
+  datasource:
+    username: postgres
+    password: Amolmadhu@2026
+    url: jdbc:postgresql://localhost:5432/userinfo_db
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  main:
+    allow-circular-references: true
+    allow-bean-definition-overriding: true
+management:
+   endpoints:
+        web:
+         exposure:
+          include: '*'
+server:
+  port: 8083
+jwt:
+  secret: mySecretKeyForJwtAuthentication123456789
+  expiration: 86400000
+
+
