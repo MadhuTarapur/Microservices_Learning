@@ -2,8 +2,8 @@ spring:
   application:
     name: Customer-Service
   datasource:
-    username: postgres
-    password: Amolmadhu@2026
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
     url: jdbc:postgresql://localhost:5432/userinfo_db
     driver-class-name: org.postgresql.Driver
   jpa:
@@ -21,7 +21,7 @@ management:
 server:
   port: 8083
 jwt:
-  secret: mySecretKeyForJwtAuthentication123456789
+  secret: ${JWT_SECRET}
   expiration: 86400000
 
 
